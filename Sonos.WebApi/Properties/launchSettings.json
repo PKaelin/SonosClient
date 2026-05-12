@@ -15,7 +15,7 @@
       "environmentVariables": {
         "ASPNETCORE_HTTP_PORTS": "8080",
         "SONOS_HOST_ADDRESS": "http://[SONOS_ADDRESS]:1400",
-        "AUDIO_HOST_ADDRESS": "http://[AUDIO_ADDRESS]:32788"
+        "AUDIO_ENDPOINT_ADDRESS": "http://[AUDIO_ADDRESS]:32788/api/image/GetItem"
       },
       "publishAllPorts": true,
       "useSSL": false

@@ -27,11 +27,21 @@ Accept: application/json
 #------------------------------------------------------------------------------
 # Play wav file on Sonos
 #------------------------------------------------------------------------------
-POST {{Sonos_WebApi_HostAddress}}/api/sonos/ProcessWav
+POST {{Sonos_WebApi_HostAddress}}/api/sonos/Process
+Content-Type: application/json
+
+{
+  "Filename": "test.wav"
+}
 
 ###
 
 #------------------------------------------------------------------------------
 # Play mp3 file on Sonos
 #------------------------------------------------------------------------------
-POST {{Sonos_WebApi_HostAddress}}/api/sonos/ProcessMp3
+POST {{Sonos_WebApi_HostAddress}}/api/sonos/Process
+Content-Type: application/json
+
+{
+  "Filename": "test.mp3"
+}

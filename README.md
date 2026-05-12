@@ -37,7 +37,7 @@ http://[SonosIP]:1400/xml/AVTransport1.xml
 Before running this solution, consider the following:
 - Sonos speaker should have a fixed IP otherwise this POC works randomly.
 - Sonos speaker and this POC should either run in the same network or Sonos speaker should have access to this API endpoint and vise versa (configure Network/Firewall).
-- Environment variables (SONOS_HOST_ADDRESS/AUDIO_HOST_ADDRESS) can be configured through launchSettings.json, docker run or docker compose.
+- Environment variables (SONOS_HOST_ADDRESS/AUDIO_ENDPOINT_ADDRESS) can be configured through launchSettings.json, docker run or docker compose.
 - In Microsoft Visual Studio, this POC uses the Docker port 32788 as defined in launchSettings.json.
 - API testing can be performed using the Sonos.WebApi.http REST client file.
 
