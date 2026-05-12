@@ -1,5 +1,6 @@
 # Sonos Client - Proof Of Concept (POC)
-This project is a proof of concept for playing `.wav` or `.mp3` audio files on a Sonos speaker.
+This project is a proof of concept for playing `.wav` or `.mp3` audio files on a Sonos speaker.  
+Sonos speakers cannot receive audio files directly. Instead, you must provide a URL for the speaker to fetch and play the audio.  
 
 Tested with:
 - Sonos Play 1
@@ -26,7 +27,7 @@ To see a set of service descriptions use:
 http://[SonosIP]:1400/xml/device_description.xml
 ```
 
-To see details about the service type "urn:schemas-upnp-org:service:AVTransport:1" use:
+To see details about e.g. the service type "urn:schemas-upnp-org:service:AVTransport:1" use:
 ```
 http://[SonosIP]:1400/xml/AVTransport1.xml
 ```
