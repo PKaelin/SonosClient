@@ -16,13 +16,8 @@ namespace Sonos.WebApi.Controllers
         public SonosController() 
         {
             // Environment variables can be set in launchSettings.json, docker run or docker compose
-            sonosHostAddress = Environment.GetEnvironmentVariable("SONOS_HOST_ADDRESS");
-            audioEndpointAddress = Environment.GetEnvironmentVariable("AUDIO_ENDPOINT_ADDRESS");
-
-            if(string.IsNullOrEmpty(sonosHostAddress) || string.IsNullOrEmpty(audioEndpointAddress))
-            {
-                throw new ArgumentNullException("Either SONOS_HOST_ADDRESS or AUDIO_ENDPOINT_ADDRESS or both are not set.");
-            }
+            sonosHostAddress = Environment.GetEnvironmentVariable("SONOS_HOST_ADDRESS") ?? throw new ArgumentNullException("Environment variable SONOS_HOST_ADDRESS is not set.");
+            audioEndpointAddress = Environment.GetEnvironmentVariable("AUDIO_ENDPOINT_ADDRESS") ?? throw new ArgumentNullException("Environment variable AUDIO_ENDPOINT_ADDRESS is not set.");
 
             if(sonosHostAddress.StartsWith("http://[SONOS_ADDRESS]") || (audioEndpointAddress.StartsWith("http://[AUDIO_ADDRESS]")))
             {
